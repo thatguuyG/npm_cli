@@ -29,4 +29,4 @@ To uninstall the global cli tool:
 npm uninstall -g cli
 ```
 
-In this case, ###cli is the name field under package.json
+In this case, cli is the name field under package.json
