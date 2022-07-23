@@ -22,3 +22,11 @@ If you'd like to install the tool globally on your machine, do
 ```bash
 npm i -g
 ```
+
+To uninstall the global cli tool:
+
+```bash
+npm uninstall -g cli
+```
+
+In this case, cli is the name field under package.json
