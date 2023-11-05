@@ -1,21 +1,18 @@
 #! /usr/bin/env node
 
 const { program } = require("commander");
-const list = require("./commands/list");
-const add = require("./commands/add");
-const markDone = require("./commands/markDone");
+const reconcile = require("./commands/reconcile");
 
-program.command("list").description("List all the TODO tasks").action(list);
-
-program.command("add <task>").description("Add a new TODO task").action(add);
 
 program
-  .command("mark-done")
-  .description("Mark commands done")
+  .command("reconcile <source> <target> <output>")
+  .description("Reconcile between source and target csv files")
+  .option("-s, --source <source>", "source CSV path")
+  .option("-t, --target <target>", "target CSV path")
   .option(
-    "-t, --tasks <tasks...>",
-    "The tasks to mark done. If not specified, all tasks will be marked done."
+    "-o, --output <output>",
+    "reconciliation report output path"
   )
-  .action(markDone);
+  .action(reconcile);
 
 program.parse();

@@ -34,10 +34,10 @@ In this case, cli is the name field under package.json
 
 ## Run the project
 
-To run the project, we enter the word **todo** on the terminal
+To run the project, we enter the word **csv_reconciler** on the terminal
 
 ```bash
-todos -h
+csv_reconciler -h
 ```
 
 Output 
@@ -48,24 +48,18 @@ Options:
   -h, --help           display help for command
 
 Commands:
-  list                 List all the TODO tasks 
-  add <task>           Add a new TODO task     
-  mark-done [options]  Mark commands done      
+  csv_reconciler       Reconcile between source and target csv files   
   help [command]       display help for command
 ```
 
 #### Basic Operations
 
-1. List all todo items
+1. Reconcile between source and target csv files 
 ```bash
-todos list
-```
-2. Add a new todo task
-```bash
-todos add <task>
+csv_reconciler reconcile <source> <target> <output>
 ```
 
-3. Add a new todo task
+#### Run app 
 ```bash
-todos mark-done --tasks <taskNo>
+csv_reconciler reconcile source.csv target.csv reconciliation_report.csv
 ```
